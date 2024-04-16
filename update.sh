@@ -63,8 +63,8 @@ export OS_ARCH=$( uname -m );
 # // String Untuk Membantu Pemasangan
 # ═══════════════════════════════════
 export AUTHER="KaizenVPN";
-export ROOT_DIRECTORY="/etc/sunbearvpn";
-export CORE_DIRECTORY="/usr/local/sunbearvpn";
+export ROOT_DIRECTORY="/etc/kaizenvpn";
+export CORE_DIRECTORY="/usr/local/kaizenvpn";
 export SERVICE_DIRECTORY="/etc/systemd/system";
 export SCRIPT_SETUP_URL="https://raw.githubusercontent.com/sunbear88/scvps/main/setup.sh";
 export REPO_URL="https://github.com/sunbear88/scvps";
@@ -85,7 +85,7 @@ export TIME_NYA="$TIMEZONE";
 # ══════════════════════════════
 # // Mendapatkan maklumat Domain
 # ══════════════════════════════
-export domain=$( cat /etc/sunbearvpn/domain.txt );
+export domain=$( cat /etc/kaizenvpn/domain.txt );
 
 #V2.7
 rm /usr/local/sbin/addemailbackup
@@ -102,9 +102,9 @@ wget -q -O /usr/local/sbin/infonya "https://raw.githubusercontent.com/sunbear88/
 wget -q -O /usr/local/sbin/vpnscript "https://raw.githubusercontent.com/sunbear88/scvps/main/Setup/script-version.sh"; chmod +x /usr/local/sbin/vpnscript;
 
 #V2.6
-mv /usr/local/sunbearvpn/xray-mini /root/.backupxray
-wget -q -O /usr/local/sunbearvpn/xray-mini "https://raw.githubusercontent.com/sunbear88/scvps/main/Resource/Core/xray-mini";
-chmod 755 /usr/local/sunbearvpn/xray-mini
+mv /usr/local/kaizenvpn/xray-mini /root/.backupxray
+wget -q -O /usr/local/kaizenvpn/xray-mini "https://raw.githubusercontent.com/sunbear88/scvps/main/Resource/Core/xray-mini";
+chmod 755 /usr/local/kaizenvpn/xray-mini
 systemctl restart xray-mini@tls;
 systemctl restart xray-mini@nontls;
 systemctl restart xray-mini@socks;
@@ -119,19 +119,19 @@ systemctl restart stunnel4;
 systemctl restart sslh;
 
 #V2.5
-rm /usr/local/sunbearvpn/vmess-auto-kill
-rm /usr/local/sunbearvpn/ssh-auto-kill
-rm /usr/local/sunbearvpn/vless-auto-kill
-rm /usr/local/sunbearvpn/trojan-auto-kill
-rm /usr/local/sunbearvpn/ss-auto-kill
+rm /usr/local/kaizenvpn/vmess-auto-kill
+rm /usr/local/kaizenvpn/ssh-auto-kill
+rm /usr/local/kaizenvpn/vless-auto-kill
+rm /usr/local/kaizenvpn/trojan-auto-kill
+rm /usr/local/kaizenvpn/ss-auto-kill
 rm /usr/local/sbin/autokill-menu
 rm /usr/local/sbin/listmulti
 rm /usr/local/sbin/vpnscript
-wget -q -O /usr/local/sunbearvpn/vmess-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/vmess-kill.sh"; chmod +x /usr/local/sunbearvpn/vmess-auto-kill;
-wget -q -O /usr/local/sunbearvpn/ssh-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/ssh-kill.sh"; chmod +x /usr/local/sunbearvpn/ssh-auto-kill;
-wget -q -O /usr/local/sunbearvpn/vless-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/vless-kill.sh"; chmod +x /usr/local/sunbearvpn/vless-auto-kill;
-wget -q -O /usr/local/sunbearvpn/trojan-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/trojan-kill.sh"; chmod +x /usr/local/sunbearvpn/trojan-auto-kill;
-wget -q -O /usr/local/sunbearvpn/ss-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/ss-kill.sh"; chmod +x /usr/local/sunbearvpn/ss-auto-kill;
+wget -q -O /usr/local/kaizenvpn/vmess-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/vmess-kill.sh"; chmod +x /usr/local/kaizenvpn/vmess-auto-kill;
+wget -q -O /usr/local/kaizenvpn/ssh-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/ssh-kill.sh"; chmod +x /usr/local/kaizenvpn/ssh-auto-kill;
+wget -q -O /usr/local/kaizenvpn/vless-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/vless-kill.sh"; chmod +x /usr/local/kaizenvpn/vless-auto-kill;
+wget -q -O /usr/local/kaizenvpn/trojan-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/trojan-kill.sh"; chmod +x /usr/local/kaizenvpn/trojan-auto-kill;
+wget -q -O /usr/local/kaizenvpn/ss-auto-kill "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/ss-kill.sh"; chmod +x /usr/local/kaizenvpn/ss-auto-kill;
 wget -q -O /usr/local/sbin/autokill-menu "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/menu.sh"; chmod +x /usr/local/sbin/autokill-menu;
 wget -q -O /usr/local/sbin/listmulti "https://raw.githubusercontent.com/sunbear88/scvps/main/Menu/Pro/Autokill/listmulti.sh"; chmod +x /usr/local/sbin/listmulti;
 wget -q -O /usr/local/sbin/vpnscript "https://raw.githubusercontent.com/sunbear88/scvps/main/Setup/script-version.sh"; chmod +x /usr/local/sbin/vpnscript;
@@ -209,12 +209,12 @@ systemctl restart xray-mini@tls
 systemctl restart xray-mini@socks
 systemctl restart xray-mini@http
 
-rm /etc/sunbearvpn/version;
-rm /etc/sunbearvpn/edition
+rm /etc/kaizenvpn/version;
+rm /etc/kaizenvpn/edition
 export SCVERSION="V2.7";
 export EDITION="Multiport Edition";
-echo "$SCVERSION" > /etc/sunbearvpn/version;
-echo "$EDITION" > /etc/sunbearvpn/edition;
+echo "$SCVERSION" > /etc/kaizenvpn/version;
+echo "$EDITION" > /etc/kaizenvpn/edition;
 
 clear
 echo -e ""
@@ -231,8 +231,8 @@ echo -e "  ► Sila tunggu, sistem sedang disemak.."
 sleep 2
 
 # // Make Folder for save the changelog
-mkdir -p /etc/sunbearvpn/changelog/;
-rm -f /etc/sunbearvpn/changelog/ch.log;
+mkdir -p /etc/kaizenvpn/changelog/;
+rm -f /etc/kaizenvpn/changelog/ch.log;
 
 clear
 echo -e "";
@@ -243,22 +243,22 @@ echo -e "${CYAN}═════════════════════�
 echo -e "${WBBG}               [ VERSI SKRIP ]              ${NC}";
 echo -e "${CYAN}════════════════════════════════════════════${NC}";
 echo -e "";
-echo -e "  [Changelog]" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.7 : Tukar backup melalui google drive kepada backup melalui bot telegram" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Fix sesetengah menu tiada tunjuk bandwith download dan upload" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Tambah menu "Cek Status Streaming"" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.6 : Update Xray Core (Support CF-RAY)" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.5 : Fix fungsi Autokill Multilogin" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Tambah Changelog dalam menu "Cek versi skrip"" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.4 : Fix fungsi Autoexpire" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.3 : Tambah menu "Memasang Webmin"" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.2 : Tambah menu "Set Autoreboot"" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Fix fungsi Autoreboot" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Membuang menu "Update skrip". Sistem akan update secara automatik selepas ini" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.1 : Fix error yang terdapat di menu "Memadam Akaun" untuk servis SSH & OpenVPN" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "       : Membuang menu "Update skrip". Sistem akan update secara automatik selepas ini" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V2.0 : Update sistem ke Multiport Edition" | tee -a /etc/sunbearvpn/changelog/ch.log;
-echo -e "  V1.0 : Skrip lama versi V2ray & Xray" | tee -a /etc/sunbearvpn/changelog/ch.log;
+echo -e "  [Changelog]" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.7 : Tukar backup melalui google drive kepada backup melalui bot telegram" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Fix sesetengah menu tiada tunjuk bandwith download dan upload" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Tambah menu "Cek Status Streaming"" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.6 : Update Xray Core (Support CF-RAY)" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.5 : Fix fungsi Autokill Multilogin" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Tambah Changelog dalam menu "Cek versi skrip"" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.4 : Fix fungsi Autoexpire" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.3 : Tambah menu "Memasang Webmin"" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.2 : Tambah menu "Set Autoreboot"" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Fix fungsi Autoreboot" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Membuang menu "Update skrip". Sistem akan update secara automatik selepas ini" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.1 : Fix error yang terdapat di menu "Memadam Akaun" untuk servis SSH & OpenVPN" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "       : Membuang menu "Update skrip". Sistem akan update secara automatik selepas ini" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V2.0 : Update sistem ke Multiport Edition" | tee -a /etc/kaizenvpn/changelog/ch.log;
+echo -e "  V1.0 : Skrip lama versi V2ray & Xray" | tee -a /etc/kaizenvpn/changelog/ch.log;
 echo -e "";
 echo -e "  Selesai! Anda sedang menggunakan skrip versi terkini !";
 echo -e "  KaizenVPN skrip ${SCVERSION} ${EDITION} | Ubuntu - Debian";
